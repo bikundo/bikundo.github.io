@@ -2,11 +2,11 @@
  * URL: http://alvarez.is
  *
  */
-@import url(http://fonts.googleapis.com/css?family=Salsa);
+@import url(http://fonts.googleapis.com/css?family=Exo+2:700);
 @import url(http://fonts.googleapis.com/css?family=Audiowide);
 body {
   	background-color: #f2f2f2;
-	font-family: 'Salsa', cursive;
+	font-family: 'Exo 2', sans-serif;
     font-weight: 300;
     font-size: 20px;
     color: #555;
