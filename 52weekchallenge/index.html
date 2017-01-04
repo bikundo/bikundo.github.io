@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/vue.min.js"></script>
+    <title>#52WeekChallenge</title>
+    <style>
+        .month {
+            background: whitesmoke;
+            margin: 5px !important;
+        }
+
+        #app {
+            margin-top: 70px;
+        }
+
+        .wells {
+            min-height: 20px;
+            padding: 6px;
+            margin-bottom: 5px;
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 0 !important;
+        }
+
+        .sec {
+            border-right: 1px solid #cac7c7;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                #52WeekChallenge
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="http://www.rookie-manager.com/personal-finance/why-take-on-the-52-week-challenge/">
+                    Article
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/search?q=%2352WeekChallenge&src=typd">
+                    Twitter
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container" id="app">
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="starting">Starting amount</label>
+                <input id="starting" type="number" step="10" class="form-control" v-model="starting">
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h3 class="pull-right">
+                total saved : KES {{totalSaved}}
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <section class="month" v-for="week in computedTotals">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 wells">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 sec">
+                        Week {{week.weekNumber}}
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 sec">
+                        deposit: {{week.deposit.toLocaleString()}}
+                    </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                        Total: {{week.total.toLocaleString()}}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+<script src="js/app.js"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89813918-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</html>
