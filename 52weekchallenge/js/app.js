@@ -1,12 +1,12 @@
 var app = new Vue({
     el: '#app',
     data: {
-        starting: 100,
-        message: 'Hello Vue!',
+        starting: 50,
+        message: 'Ahoy!',
     },
     computed: {
         computedTotals: function () {
-            weeks = new Array();
+            var weeks = new Array();
             weeks[0] = [];
             weeks[0]['deposit'] = this.starting;
             weeks[0]['total'] = this.starting;
@@ -31,6 +31,6 @@ var app = new Vue({
         }
     },
     mounted: function () {
-        console.log(this.computedTotals);
+        console.log('nothing to see here, move along, nerd');
     }
 })
