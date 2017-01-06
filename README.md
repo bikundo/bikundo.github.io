@@ -1,0 +1,2 @@
+# bikundo.github.io
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/090e9fcd849499aa6a3920ee3f94eb63)](https://www.codacy.com/app/binmonk_1209/bikundo-github-io?utm_source=github.com&utm_medium=referral&utm_content=bikundo/bikundo.github.io&utm_campaign=badger)
